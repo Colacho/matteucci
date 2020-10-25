@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import '../styles/index.css';
 import Header from './header';
 import './layout.css';
+import Videocard from './videocard';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,7 +35,10 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main>
+          {children}
+          <Videocard />
+        </main>
         <footer
           style={{
             marginTop: `2rem`,
