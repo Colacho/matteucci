@@ -18,7 +18,8 @@ const IndexPage = ({ data }) => {
       </div>
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-      {data && <VideoCard image={data.item01} />}
+      <VideoCard />
+      {/* {data && <VideoCard image={data.item01} />} */}
     </Layout>
   );
 };
