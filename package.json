@@ -12,6 +12,7 @@
     "gatsby-plugin-postcss": "^3.0.3",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sharp": "^2.6.42",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.34",
     "gatsby-transformer-sharp": "^2.5.17",
     "prop-types": "^15.7.2",
@@ -21,6 +22,10 @@
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
     "prettier": "2.1.2"
   },
   "keywords": [

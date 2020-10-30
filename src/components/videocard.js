@@ -5,7 +5,7 @@ import React from 'react';
 import '../styles/index.css';
 import './layout.css';
 import CardData from './carddata';
-import CardInfo from './cardinfo';
+import CardInfo from '@/components/cardinfo';
 //import Img from 'gatsby-image';
 
 const VideoCard = ({ data }) => {
