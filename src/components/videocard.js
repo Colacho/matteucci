@@ -4,10 +4,10 @@ import React from 'react';
 
 import '../styles/index.css';
 import './layout.css';
-import CardData from './carddata';
+import CardData from '@/components/carddata';
 import CardInfo from '@/components/cardinfo';
 //import Img from 'gatsby-image';
-console.log('colacho');
+console.log('colacho2');
 const VideoCard = ({ data }) => {
   const cardList = CardData.map((i) => (
     <div
