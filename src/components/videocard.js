@@ -7,7 +7,7 @@ import './layout.css';
 import CardData from '@/components/carddata';
 import CardInfo from '@/components/cardinfo';
 //import Img from 'gatsby-image';
-console.log('colacho2');
+console.log('colacho3');
 const VideoCard = ({ data }) => {
   const cardList = CardData.map((i) => (
     <div
