@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
-import VideoCard from '../components/videocard';
+import VideoCard from '../components/video-grid';
 
 const IndexPage = ({ data }) => {
   return (
@@ -17,34 +17,9 @@ const IndexPage = ({ data }) => {
         <Image />
       </div>
       <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       <VideoCard />
-      {/* {data && <VideoCard image={data.item01} />} */}
     </Layout>
   );
 };
-
-export const query = graphql`
-  query {
-    item01: file(relativePath: { eq: "bonitasChico.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    item02: file(relativePath: { eq: "jr.jpg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
 
 export default IndexPage;
