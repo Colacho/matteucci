@@ -70,6 +70,7 @@ const VideoGrid = () => {
       {cardId.map((i) => (
         <div key={i.id} className="border-solid border-2 rounded px-2 py-2 m-2 shadow-lg">
           <VideoCard
+            videoId={i.id}
             image={i.image}
             videoSrcURL={i.videoSrcURL}
             gender={i.gender}
