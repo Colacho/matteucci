@@ -66,7 +66,7 @@ const VideoGrid = () => {
   ];
   console.log(query);
   return (
-    <div className="bg-gray-300 p-4">
+    <div className="bg-gray-300 p-4 w-screen">
       <div className="inline-block w-full">
         <div className="mt-0 float-left">
           <h2>Ultimas producciones</h2>
@@ -77,10 +77,10 @@ const VideoGrid = () => {
           </button>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full text-center">
         {cardId.map((i) => (
           <div
-            className="inline-flex flex-wrap border-solid border-2 rounded p-2 m-2 shadow-lg m-4"
+            className="inline-flex flex-wrap border-solid border-2 rounded p-2 m-2 shadow-lg m-4 bg-gray-500"
             key={i.id}
           >
             <VideoCard
