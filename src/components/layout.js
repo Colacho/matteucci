@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import '../styles/index.css';
 import Header from './header';
+import { Helmet } from 'react-helmet';
 import './layout.css';
 
 const Layout = ({ children }) => {
@@ -25,15 +26,22 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <div className="bg-primary text-primary-contrast font-roboto">
+    <>
       <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <main className="container mx-auto ">
+      <Helmet>
+        <body className="bg-primary text-primary-contrast font-roboto"></body>
+      </Helmet>
+      <div className="container mx-auto">
         <main>{children}</main>
-        <footer className="my-4">
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
           © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
-      </main>
-    </div>
+      </div>
+    </>
   );
 };
 
