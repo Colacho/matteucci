@@ -66,20 +66,35 @@ const VideoGrid = () => {
   ];
   console.log(query);
   return (
-    <div className="inline-flex flex-wrap ">
-      {cardId.map((i) => (
-        <div key={i.id} className="border-solid border-2 rounded px-2 py-2 m-2 shadow-lg">
-          <VideoCard
-            videoId={i.id}
-            image={i.image}
-            videoSrcURL={i.videoSrcURL}
-            gender={i.gender}
-            direction={i.direction}
-            duration={i.duration}
-            location={i.location}
-          />
+    <div className="bg-gray-300 p-4">
+      <div className="inline-block w-full">
+        <div className="mt-0 float-left">
+          <h2>Ultimas producciones</h2>
         </div>
-      ))}
+        <div className="mt-0 float-right">
+          <button className="border-2 border-green-500 hover:bg-green-500 rounded">
+            Mas trabajos
+          </button>
+        </div>
+      </div>
+      <div className="w-full">
+        {cardId.map((i) => (
+          <div
+            className="inline-flex flex-wrap border-solid border-2 rounded p-2 m-2 shadow-lg m-4"
+            key={i.id}
+          >
+            <VideoCard
+              videoId={i.id}
+              image={i.image}
+              videoSrcURL={i.videoSrcURL}
+              gender={i.gender}
+              direction={i.direction}
+              duration={i.duration}
+              location={i.location}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

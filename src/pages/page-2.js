@@ -5,17 +5,17 @@ import Video from '@/components/video';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import VideoCard from '@/components/video-card';
 //import Img from 'gatsby-image';
 //import VideoGrid from '@/components/video-grid';
 
-const SecondPage = ({ location }) => {
+const SecondPage = () => {
   return (
     <Layout>
       <SEO title="Page two" />
       <h1>Hi from the second page</h1>
       <p>Welcome to page 2</p>
       <Link to="/">Go back to the homepage</Link>
-      <Video videoSrcURL={location.state.vidLoc} />
     </Layout>
   );
 };
