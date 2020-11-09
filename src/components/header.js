@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Logo from '@/components/logo';
 
 const Header = ({ siteTitle }) => (
-  <header className="container mx-auto py-4">
-    <Logo />
+  <header className="py-4 border-accent-500 border-b">
+    <div className="container mx-auto">
+      <Logo />
+    </div>
   </header>
 );
 
@@ -13,7 +15,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  siteTitle: `Matteucci`,
+  siteTitle: 'Matteucci',
 };
 
 export default Header;

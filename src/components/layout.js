@@ -9,10 +9,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import '../styles/index.css';
 import Header from './header';
 import { Helmet } from 'react-helmet';
-import './layout.css';
 import Footer from '@/components/footer';
 
 const Layout = ({ children }) => {
@@ -34,6 +32,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <div className="container mx-auto">
         <main>{children}</main>
+        <Footer />
         <footer
           style={{
             marginTop: `2rem`,
