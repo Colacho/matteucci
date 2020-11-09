@@ -1,17 +1,23 @@
 import React from 'react';
-const Video = ({ videoSrcURL, videoTitle, ...props }) => (
-  <div className="video">
+import type from 'prop-types';
+
+const Video = ({ video }) => (
+  <div className="video flex flex-row justify-center overflow-hidden relative">
     <iframe
-      src={videoSrcURL}
-      width="640"
-      height="360"
-      title={videoTitle}
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      frameBorder="5"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
+      title="video_vimeo"
+      src={video}
+      width="853"
+      height="479"
+      frameBorder="0"
       allowFullScreen
+      webkitallowfullscreen=""
+      mozallowfullscreen=""
     />
   </div>
 );
+
+Video.propTypes = {
+  video: type.string.isRequired,
+};
+
 export default Video;

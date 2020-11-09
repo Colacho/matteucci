@@ -1,0 +1,17 @@
+{
+  "id": "3",
+  "name": "Critters 2",
+  "description": "Mujeres unidas por una pasión.. Blah blah blah",
+  "video": "https://player.vimeo.com/video/139411080",
+  "date": "2017-09-18T23:19:51.246Z",
+  "dataSheet": {
+    "genre": "Documental",
+    "direction": "Javier Matteucci",
+    "duration": "3 minutos",
+    "location": "Rosario, Santa Fe",
+    "cast": {
+      "direction": "Javier Matteucci",
+      "production": "Javier Matteucci"
+    }
+  }
+}
