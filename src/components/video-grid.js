@@ -3,9 +3,6 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import '../styles/index.css';
-import './layout.css';
-
 import VideoCard from '@/components/video-card';
 import Img from 'gatsby-image';
 
