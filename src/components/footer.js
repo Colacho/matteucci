@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 const Footer = () => {
   const query = useStaticQuery(graphql`
     query {
-      javier: file(relativePath: { eq: "jr.jpg" }) {
+      javier: file(relativePath: { eq: "javier-footer1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -33,21 +33,29 @@ const Footer = () => {
           }
         }
       }
+      javier2: file(relativePath: { eq: "javier-footer2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
   return (
-    <div>
-      <div className="bg-gray-600 place-content-center m-2 inline-flex flex-wrap w-full">
-        <div className="w-1/3 rounded">
-          <Img className="rounded-full" fluid={query.javier.childImageSharp.fluid} />
-        </div>
-        <div className="w-1/3 text-center place-self-center">
-          <button className="border-2 rounded border-green-500 hover:bg-green-500 ">
-            Contactame
-          </button>
+    <div className="bg-primary-500">
+      <div className="place-content-center m-2 inline-flex flex-wrap w-full">
+        <Img className="rounded-full w-32 float-left" fluid={query.javier.childImageSharp.fluid} />
+        <button className="float-right rounded bg-accent-500 p-2 m-8 h-12 ">Contacto</button>
+        <div>
+          <Img
+            className="rounded-full w-24 h-24 float-left m-2"
+            fluid={query.javier2.childImageSharp.fluid}
+          />
+          <p className="m-2 p-4">que ganas de meterle una piña a este gil...</p>
         </div>
       </div>
-      <div className="bg-gray-600 place-content-center m-2 inline-flex flex-wrap w-full">
+      <div className="place-content-center m-2 inline-flex flex-wrap w-full">
         <div className="w-16 m-2">
           <Img fluid={query.facebook.childImageSharp.fluid} />
         </div>

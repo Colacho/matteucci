@@ -30,15 +30,16 @@ const Layout = ({ children }) => {
       <Helmet>
         <body className="bg-primary text-primary-contrast font-roboto"></body>
       </Helmet>
-      <div className="container mx-auto">
+
+      <div>
         <main>{children}</main>
-        <Footer />
         <footer
           style={{
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <Footer />© {new Date().getFullYear()}, Built with{' '}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
     </>

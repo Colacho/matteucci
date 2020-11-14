@@ -1,6 +1,5 @@
 import React from 'react';
-//import Video from '@/components/video';
-//import PropTypes from 'prop-types';
+
 import { useStaticQuery, graphql } from 'gatsby';
 
 import VideoCard from '@/components/video-card';
@@ -61,7 +60,7 @@ const VideoGrid = () => {
       location: 'Rosario, Santa Fe',
     },
   ];
-  console.log(query);
+
   return (
     <div className="bg-gray-300 p-4 w-screen">
       <div className="inline-block w-full">

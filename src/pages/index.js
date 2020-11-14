@@ -4,9 +4,10 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
-import VideoCard from '../components/video-grid';
 
-const IndexPage = ({ data }) => {
+import TitleGrid from './title-grid';
+
+const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -17,7 +18,6 @@ const IndexPage = ({ data }) => {
         <Image />
       </div>
       <Link to="/page-2/">Go to page 2</Link> <br />
-      <VideoCard />
     </Layout>
   );
 };

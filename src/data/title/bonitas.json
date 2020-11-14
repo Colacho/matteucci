@@ -1,14 +1,14 @@
 {
-  "id": "3",
-  "name": "Critters 2",
-  "description": "Son lo criter boludo",
-  "image": "../title-images/critters2.jpg",
-  "video": "https://www.youtube.com/embed/R0gksnIKGxA",
+  "id": "2",
+  "name": "Bonitas",
+  "description": "Perder no es una opción",
+  "image": "../title-images/afiche-bonitas.jpg",
+  "video": "https://www.youtube.com/embed/4n0xNbfJLR8",
   "date": "2017-09-18T23:19:51.246Z",
   "dataSheet": {
     "genre": "Documental",
-    "direction": "Javier Matteucci",
-    "duration": "3 minutos",
+    "direction": "Emi",
+    "duration": "5 minutos",
     "location": "Rosario, Santa Fe",
     "staff": {
       "director": {

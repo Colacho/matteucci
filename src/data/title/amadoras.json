@@ -1,8 +1,8 @@
 {
   "id": "1",
   "name": "Amadoras",
-  "description": "Mujeres unidas por una pasión.. Blah blah blah",
-  "image": "../title-images/Afiche_Amadoras.jpg",
+  "description": "Mujeres cotra reloj",
+  "image": "../title-images/afiche-amadoras.jpg",
   "video": "https://player.vimeo.com/video/139411080",
   "date": "2017-09-18T23:19:51.246Z",
   "dataSheet": {
@@ -10,9 +10,21 @@
     "direction": "Javier Matteucci",
     "duration": "3 minutos",
     "location": "Rosario, Santa Fe",
+    "staff": {
+      "director": {
+        "name": "Javier",
+        "image": "../title-images/jr.jpg"
+      }
+    },
     "cast": {
-      "direction": "Javier Matteucci",
-      "production": "Javier Matteucci"
+      "act1": {
+        "name": "Javier",
+        "image": "../title-images/jr.jpg"
+      },
+      "act2": {
+        "name": "Javier",
+        "image": "../title-images/jr.jpg"
+      }
     }
   }
 }
