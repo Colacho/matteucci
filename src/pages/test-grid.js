@@ -12,8 +12,8 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
     <Layout>
       {/* TODO add SEO seo={pageContext?.seo} */}
       <SEO title={'Video Grid'} />
-      <div className="m-8 p-8 leading-loose tracking-widest bg-primary-500">
-        <p>
+      <div className="container mx-auto bg-primary-500">
+        <p className="leading-loose tracking-widest text-center hidden sm:block">
           Lorem ipsum dolor sit amet consectetur adipiscing elit nibh, ante fames curae augue class
           rhoncus pellentesque ornare pharetra, ridiculus dapibus habitasse elementum cras sagittis
           massa. Class dapibus vivamus sapien ullamcorper sagittis montes, eget integer nibh mus
@@ -28,36 +28,44 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
           conubia senectus.
         </p>
       </div>
-      <div className="inline-flex flex-wrap w-full items-start justify-center bg-primary-600 w-full border-accent-500 border-b">
-        <div className="grid grid-cols-2 flex-wrap w-full justify-items-center">
-          <h3 className="my-12 mx-8  flex-1">últimos titulos</h3>
 
-          <button className="rounded bg-accent-500 p-2 my-12 mx-16 w-32  flex-1">ver todos</button>
+      <div className="w-full items-start justify-center bg-primary-600 border-accent-500 border-b">
+        <div className="container mx-auto grid grid-cols-6 justify-center flex my-4">
+          <h3 className="col-start-1 col-end-3 my-2">últimos titulos</h3>
+
+          <button className="rounded bg-accent-500 p-2 col-start-6 col-span-1 my-2 shadow-inner hover:bg-accent-400 transition duration-300 ease-in-out">
+            ver todos
+          </button>
         </div>
-        {titlesData.edges.map(({ node: titleData }) => (
-          <div key={titleData.id}>
-            <h5 className="m-4">{titleData.name}</h5>
-
-            <div className="rounded m-4 shadow-inner bg-primary-400 relative">
-              <button className="absolute m-24 border-solid border-2 border-accent-500 rounded-full p-2">
-                ver
-              </button>
-              {titleData.image && (
-                <Img
-                  className="rounded hover:opacity-50"
-                  fluid={titleData.image.childImageSharp.fluid}
-                />
-              )}
-
-              <div className="p-4">
+        <div className="container mx-auto flex flex-wrap justify-between ">
+          {titlesData.edges.map(({ node: titleData }) => (
+            <div
+              key={titleData.id}
+              className="flex rounded m-4 shadow-inner bg-primary-400 relative grid grid-cols-1"
+            >
+              <div className="items-start grid grid-row-2">
+                <div className="absolute place-self-center">
+                  <button className="border-solid border-2 border-accent-500 bg-accent-500 rounded-full p-2">
+                    ver
+                  </button>
+                </div>
+                {titleData.image && (
+                  <Img
+                    className="rounded hover:opacity-50 transition duration-300 ease-in-out"
+                    fluid={titleData.image.childImageSharp.fluid}
+                  />
+                )}
+              </div>
+              <div className="p-4 flex flex-wrap grid grid-rows-5 items-end">
+                <p>{titleData.name}</p>
                 <p>Direción: {titleData.dataSheet.direction}</p>
                 <p>Duración: {titleData.dataSheet.duration}</p>
                 <p>Género: {titleData.dataSheet.genere}</p>
                 <p>Locación: {titleData.dataSheet.location}</p>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </Layout>
   );
