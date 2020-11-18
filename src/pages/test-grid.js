@@ -33,15 +33,15 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
         <div className="container mx-auto grid grid-cols-6 justify-center flex my-4">
           <h3 className="col-start-1 col-end-3 my-2">últimos titulos</h3>
 
-          <button className="rounded bg-accent-500 p-2 col-start-6 col-span-1 my-2 shadow-inner hover:bg-accent-400 transition duration-300 ease-in-out">
-            ver todos
+          <button className="rounded bg-accent-500 p-2 col-start-6 col-span-1 my-2 hover:bg-accent-400 transition duration-300 ease-in-out">
+            ver todos ▶
           </button>
         </div>
         <div className="container mx-auto flex flex-wrap justify-between ">
           {titlesData.edges.map(({ node: titleData }) => (
             <div
               key={titleData.id}
-              className="flex rounded m-4 shadow-inner bg-primary-400 relative grid grid-cols-1"
+              className="flex rounded m-4 shadow-lg bg-primary-400 relative grid grid-cols-1"
             >
               <div className="items-start grid grid-row-2">
                 <div className="absolute place-self-center">
@@ -60,7 +60,7 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
                 <p>{titleData.name}</p>
                 <p>Direción: {titleData.dataSheet.direction}</p>
                 <p>Duración: {titleData.dataSheet.duration}</p>
-                <p>Género: {titleData.dataSheet.genere}</p>
+                <p>Género: {titleData.dataSheet.genre}</p>
                 <p>Locación: {titleData.dataSheet.location}</p>
               </div>
             </div>

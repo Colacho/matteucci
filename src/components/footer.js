@@ -46,7 +46,7 @@ const Footer = () => {
     <div className="bg-primary-500">
       <div className="place-content-center m-2 inline-flex flex-wrap w-full">
         <Img className="rounded-full w-32 float-left" fluid={query.javier.childImageSharp.fluid} />
-        <button className="float-right rounded bg-accent-500 p-2 m-8 h-12 ">Contacto</button>
+        <button className="float-right rounded bg-accent-500 p-2 m-8 h-12 ">Contacto ✉</button>
         <div>
           <Img
             className="rounded-full w-24 h-24 float-left m-2"
