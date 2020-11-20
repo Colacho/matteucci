@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allTitleJson {
+      allTitleJson(sort: { fields: [date], order: DESC }, limit: 100) {
         edges {
           node {
             fields {
@@ -47,6 +47,25 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
+
+  // Titles
+  const titles = result.data.allTitleJson.edges;
+  const titlesPerPage = 4;
+  const numPages = Math.ceil(titles.length / titlesPerPage);
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? 'titles' : `/titles/${i + 1}`,
+      component: path.resolve('./src/templates/titles.js'),
+      context: {
+        limit: titlesPerPage,
+        skip: i * titlesPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
+  });
+
+  // Title
   result.data.allTitleJson.edges.forEach(({ node }) => {
     createPage({
       path: `/title${node.fields.slug}`,
