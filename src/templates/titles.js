@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import Layout from '@/components/layout';
 import SEO from '@/components/seo';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import cx from 'classnames';
 
-const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
-  console.log('Page Context', titlesData.edges);
+const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: pagination }) => {
+  console.log('pagination', pagination);
 
   return (
     <Layout>
@@ -66,6 +67,53 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
             </div>
           ))}
         </div>
+        {pagination?.numPages > 1 && (
+          <div className="container mx-auto my-4">
+            <ul className="flex justify-center">
+              <li>
+                <Link
+                  className={cx('p-2', {
+                    'pointer-events-none opacity-50': pagination.currentPage === 1,
+                  })}
+                  to={`/titles/${
+                    pagination.currentPage - 1 !== 1 ? pagination.currentPage - 1 : ''
+                  }`}
+                >
+                  {'<'}
+                </Link>
+              </li>
+              {Array(pagination.numPages)
+                .fill()
+                .map((e, i) => (
+                  <li key={i}>
+                    <Link
+                      className={cx('p-2', {
+                        'pointer-events-none opacity-50': pagination.currentPage === i + 1,
+                      })}
+                      to={`/titles/${i + 1 !== 1 ? i + 1 : ''}`}
+                    >
+                      {i + 1}
+                    </Link>
+                  </li>
+                ))}
+              <li>
+                <Link
+                  className={cx('p-2', {
+                    'pointer-events-none opacity-50':
+                      pagination.currentPage === pagination.numPages,
+                  })}
+                  to={
+                    pagination.currentPage === pagination.numPages
+                      ? `/titles/${pagination.currentPage + 1}`
+                      : '/'
+                  }
+                >
+                  {'>'}
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </Layout>
   );
@@ -73,6 +121,7 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {} }) => {
 
 TestGrid.propTypes = {
   data: PropTypes.object,
+  pageContext: PropTypes.object,
 };
 
 export const query = graphql`

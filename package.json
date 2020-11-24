@@ -24,6 +24,7 @@
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
+    "classnames": "^2.2.6",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
