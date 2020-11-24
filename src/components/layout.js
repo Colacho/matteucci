@@ -27,50 +27,53 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
+    <div className="h-full">
       <Helmet>
-        <body className="bg-primary-600 text-primary-contrast font-roboto"></body>
+        <html className="h-screen"></html>
+        <body className="bg-primary text-primary-contrast font-roboto h-screen"></body>
       </Helmet>
 
-      <main className="">{children}</main>
+      <div className="h-full flex flex-col items-stretch">
+        <Header className="flex-shrink" siteTitle={data.site.siteMetadata?.title || 'Title'} />
+        <main className="flex-grow">{children}</main>
 
-      <footer className="container mx-auto grid grid-cols-2 bg-primary-600 items-end mt-4">
-        <div className="text-xs">
-          <div>
-            © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <footer className="flex-shrink container mx-auto grid grid-cols-2 bg-primary-600 items-end mt-4">
+          <div className="text-xs">
+            <div>
+              © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </div>
+            <div>
+              Icons made by{' '}
+              <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+                Freepik
+              </a>
+              from
+              <a href="https://www.flaticon.com/" title="Flaticon">
+                www.flaticon.com
+              </a>
+            </div>
           </div>
-          <div>
-            Icons made by{' '}
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-              Freepik
+          <div className="inline-flex justify-end gap-2">
+            <a
+              href="https://www.youtube.com/channel/UCTh6Ixk5RnRBWaUwsFoVl2w "
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={Youtube} alt="Youtube" className="w-6" />
             </a>
-            from
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
+            <a href="https://www.instagram.com/matteucci.ar/" target="_blank" rel="noreferrer">
+              <img src={Instagram} alt="Instagram" className="w-6" />
             </a>
+            <a href="https://www.facebook.com/javier.matteucci" target="_blank" rel="noreferrer">
+              <img src={Facebook} alt="Facebook" className="w-6" />
+            </a>
+            <Link to="/contact/">
+              <img src={Email} alt="eMail" className="w-6" />
+            </Link>
           </div>
-        </div>
-        <div className="inline-flex justify-end gap-2">
-          <a
-            href="https://www.youtube.com/channel/UCTh6Ixk5RnRBWaUwsFoVl2w "
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={Youtube} alt="Youtube" className="w-6" />
-          </a>
-          <a href="https://www.instagram.com/matteucci.ar/" target="_blank" rel="noreferrer">
-            <img src={Instagram} alt="Instagram" className="w-6" />
-          </a>
-          <a href="https://www.facebook.com/javier.matteucci" target="_blank" rel="noreferrer">
-            <img src={Facebook} alt="Facebook" className="w-6" />
-          </a>
-          <Link to="/contact/">
-            <img src={Email} alt="eMail" className="w-6" />
-          </Link>
-        </div>
-      </footer>
-    </>
+        </footer>
+      </div>
+    </div>
   );
 };
 

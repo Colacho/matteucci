@@ -27,3 +27,8 @@
     @apply text-lg;
   }
 }
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
