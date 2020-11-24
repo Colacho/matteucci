@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Titles
   const titles = result.data.allTitleJson.edges;
-  const titlesPerPage = 4;
+  const titlesPerPage = 6;
   const numPages = Math.ceil(titles.length / titlesPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

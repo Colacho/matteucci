@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Logo from '@/components/logo';
 
 const Header = ({ siteTitle }) => (
-  <header className="py-4 border-accent-500 border-b">
+  <header className="py-4">
     <div className="container mx-auto">
       <Logo />
     </div>

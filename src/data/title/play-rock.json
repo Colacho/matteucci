@@ -1,9 +1,9 @@
 {
   "id": "6",
-  "name": "Amadoras 4",
-  "description": "Mujeres cotra reloj",
-  "image": "../title-images/afiche-amadoras.jpg",
-  "video": "https://player.vimeo.com/video/139411080",
+  "name": "Play Rock",
+  "description": "Viejos drogones contanto sus aventuras",
+  "image": "../title-images/play-rock.png",
+  "video": "https://www.youtube.com/embed/1r9CyW2AMiM",
   "date": "2019-03-03",
   "dataSheet": {
     "genre": "Documental",

@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="place-content-center m-2 inline-flex flex-wrap w-full">
-        <div className="w-16 m-2">
+        {/* <div className="w-16 m-2">
           <Img fluid={query.facebook.childImageSharp.fluid} />
         </div>
         <div className="w-16 m-2">
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
         <div className="w-16 m-2">
           <Img fluid={query.twitter.childImageSharp.fluid} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 {
   "id": "3",
-  "name": "Critters 2",
-  "description": "Se lo comen todo",
-  "image": "../title-images/critters2.jpg",
-  "video": "https://www.youtube.com/embed/R0gksnIKGxA",
+  "name": "Cinética",
+  "description": "Energía en movimiento",
+  "image": "../title-images/cinetica.png",
+  "video": "https://www.youtube.com/embed/gRBtzXDoWuc",
   "date": "1996-09-18",
   "dataSheet": {
     "genre": "Documental",

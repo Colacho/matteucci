@@ -1,12 +1,12 @@
 {
   "id": "5",
-  "name": "Amadoras 3",
-  "description": "Mujeres cotra reloj",
-  "image": "../title-images/afiche-amadoras.jpg",
-  "video": "https://player.vimeo.com/video/139411080",
+  "name": "Fiernovelli",
+  "description": "Carrera de autos de mierda",
+  "image": "../title-images/fiernovelli.png",
+  "video": "https://www.youtube.com/embed/WmhkTVY86tM",
   "date": "2018-12-01",
   "dataSheet": {
-    "genre": "Documental",
+    "genre": "Teaser",
     "direction": "Javier Matteucci",
     "duration": "3 minutos",
     "location": "Rosario, Santa Fe",
