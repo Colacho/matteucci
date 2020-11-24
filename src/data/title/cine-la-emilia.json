@@ -1,9 +1,9 @@
 {
   "id": "4",
-  "name": "Amadoras 2",
-  "description": "Mujeres cotra reloj",
-  "image": "../title-images/afiche-amadoras.jpg",
-  "video": "https://player.vimeo.com/video/139411080",
+  "name": "Nuevo Cine La Emilia",
+  "description": "Cine teatro en La Emilia",
+  "image": "../title-images/la-emilia.png",
+  "video": "https://www.youtube.com/embed/Q4DXWAWG77k",
   "date": "2018-02-01",
   "dataSheet": {
     "genre": "Documental",

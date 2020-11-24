@@ -19,7 +19,7 @@ function Contact() {
   return (
     <Layout>
       <div className="w-full bg-primary-600">
-        <div className="container mx-auto items-stretch">
+        <div className="container mx-auto">
           <h3 className="text-center">Si queres contactarme</h3>
           <form className="grid grid-cols-2 gap-2 p-4">
             <input
@@ -39,7 +39,7 @@ function Contact() {
               onChange={handleEmail}
             />
             <textarea
-              className="col-span-2 p-2 bg-primary-300 rounded h-32 align-top"
+              className="col-span-2 p-2 bg-primary-300 rounded align-top h-64"
               type="textarea"
               placeholder="Tu mensaje"
               name="message"

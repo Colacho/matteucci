@@ -5,8 +5,6 @@ import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
 
-import TitleGrid from './title-grid';
-
 const IndexPage = () => {
   return (
     <Layout>
