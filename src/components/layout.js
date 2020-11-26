@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <Header className="flex-shrink" siteTitle={data.site.siteMetadata?.title || 'Title'} />
         <main className="flex-grow">{children}</main>
 
-        <footer className="flex-shrink container mx-auto grid grid-cols-2 bg-primary-600 items-end mt-4">
+        <footer className="flex-shrink container mx-auto grid grid-cols-2  items-end p-2 mt-4">
           <div className="text-xs">
             <div>
               © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.com">Gatsby</a>

@@ -13,8 +13,8 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
     <Layout>
       {/* TODO add SEO seo={pageContext?.seo} */}
       <SEO title={'Video Grid'} />
-      <div className="">
-        <h3 className="container mx-auto">últimos titulos</h3>
+      <div className="bg-primary-600 p-8">
+        <h3 className="container mx-auto mb-4 -mt-4">Ultimos titulos</h3>
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {titlesData.edges.map(({ node: titleData }) => (
             <div
@@ -22,16 +22,20 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
               className="rounded border-2 border-primary-400 bg-primary-600  relative"
             >
               <div>
-                {titleData.image && (
-                  <Img
-                    className="rounded hover:opacity-50 transition duration-300 ease-in-out"
-                    fluid={titleData.image.childImageSharp.fluid}
-                  />
-                )}
+                <Link to={`../title${titleData.fields.slug}`}>
+                  {titleData.image && (
+                    <Img
+                      className="rounded hover:opacity-50 transition duration-300 ease-in-out"
+                      fluid={titleData.image.childImageSharp.fluid}
+                    />
+                  )}
+                </Link>
               </div>
               <div className="p-2 flex flex-col text-sm text-gray-400 text-opacity-25">
-                <h5 className="text-white">{titleData.name}</h5>
-                <p className="pb-2">{titleData.dataSheet.genre}</p>
+                <p>{titleData.dataSheet.genre}</p>
+                <Link to={`../title${titleData.fields.slug}`}>
+                  <h5 className="text-white pb-4">{titleData.name}</h5>
+                </Link>
                 <p>Duración: {titleData.dataSheet.duration}</p>
                 <p>Locación: {titleData.dataSheet.location}</p>
               </div>
