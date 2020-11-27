@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from '@/components/layout';
 import SEO from '@/components/seo';
-import Img from 'gatsby-image';
+import TitleCard from '@/components/title-card';
 import { graphql, Link } from 'gatsby';
 import cx from 'classnames';
 
@@ -17,29 +17,16 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
         <h3 className="container mx-auto mb-4 -mt-4">Ultimos titulos</h3>
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {titlesData.edges.map(({ node: titleData }) => (
-            <div
+            <TitleCard
               key={titleData.id}
-              className="rounded border-2 border-primary-400 bg-primary-600  relative"
-            >
-              <div>
-                <Link to={`../title${titleData.fields.slug}`}>
-                  {titleData.image && (
-                    <Img
-                      className="rounded hover:opacity-50 transition duration-300 ease-in-out"
-                      fluid={titleData.image.childImageSharp.fluid}
-                    />
-                  )}
-                </Link>
-              </div>
-              <div className="p-2 flex flex-col text-sm text-gray-400 text-opacity-25">
-                <p>{titleData.dataSheet.genre}</p>
-                <Link to={`../title${titleData.fields.slug}`}>
-                  <h5 className="text-white pb-4">{titleData.name}</h5>
-                </Link>
-                <p>Duración: {titleData.dataSheet.duration}</p>
-                <p>Locación: {titleData.dataSheet.location}</p>
-              </div>
-            </div>
+              className="rounded border-2 border-primary-400 bg-primary-600"
+              slug={titleData.fields.slug}
+              image={titleData.image.childImageSharp.fluid}
+              genre={titleData.dataSheet.genre}
+              name={titleData.name}
+              duration={titleData.dataSheet.duration}
+              location={titleData.dataSheet.location}
+            />
           ))}
         </div>
         {pagination?.numPages > 1 && (

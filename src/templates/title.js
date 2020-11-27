@@ -17,9 +17,7 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
         <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
       </div>
       {/* TODO add SEO seo={pageContext?.seo} */}
-      {/* <div className="block text-center">
-        <Img className="w-64 text-center" fluid={titleData.image.childImageSharp.fluid} />
-      </div> */}
+
       <div className="bg-primary-600 p-4 mb-4">
         {titleData.video && <Video video={titleData.video} />}
       </div>

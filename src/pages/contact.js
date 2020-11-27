@@ -18,43 +18,44 @@ function Contact() {
 
   return (
     <Layout>
-      <div className="w-full bg-primary-600">
-        <div className="container mx-auto">
+      <div className="w-full h-full bg-primary-600">
+        <div className="container w-full mx-auto">
           <h3 className="text-center">Si queres contactarme</h3>
-          <form className="grid grid-cols-2 gap-2 p-4">
-            <input
-              className="col-span-1 p-2 bg-primary-300 rounded"
-              type="text"
-              placeholder="tu nombre"
-              name="name"
-              value={name}
-              onChange={handleName}
-            />
-            <input
-              className="col-span-1 p-2 bg-primary-300 rounded"
-              type="text"
-              placeholder="tu email"
-              name="email"
-              value={email}
-              onChange={handleEmail}
-            />
-            <textarea
-              className="col-span-2 p-2 bg-primary-300 rounded align-top h-64"
-              type="textarea"
-              placeholder="Tu mensaje"
-              name="message"
-              value={message}
-              onChange={handleMessage}
-            />
+          <form className="p-4 flex-grow">
+            <div className="flex justify-between mb-4">
+              <input
+                className="w-2/5 p-2 bg-primary-300 rounded"
+                type="text"
+                placeholder="tu nombre"
+                name="name"
+                value={name}
+                onChange={handleName}
+              />
+              <input
+                className="w-2/5 p-2 bg-primary-300 rounded"
+                type="text"
+                placeholder="tu email"
+                name="email"
+                value={email}
+                onChange={handleEmail}
+              />
+            </div>
+            <div className="flex">
+              <textarea
+                className="flex-grow p-2 bg-primary-300 rounded align-top h-64"
+                type="textarea"
+                placeholder="Tu mensaje"
+                name="message"
+                value={message}
+                onChange={handleMessage}
+              />
+            </div>
           </form>
           <div className="text-right p-2 m-2">
             <button className="bg-accent-500 rounded p-2">Enviar</button>
           </div>
         </div>
       </div>
-      <h1>{name}</h1>
-      <h1>{email}</h1>
-      <h1>{message}</h1>
     </Layout>
   );
 }
