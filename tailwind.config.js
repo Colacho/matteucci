@@ -38,14 +38,6 @@ module.exports = {
         primary,
         accent,
       },
-      backgroundColor: {
-        primary,
-        accent,
-      },
-      textColor: {
-        primary,
-        accent,
-      },
     },
     fontFamily: {
       gotham: ['"Gotham Bold"', 'Arial', 'sans-serif'],
