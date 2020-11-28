@@ -43,22 +43,22 @@ const Layout = ({ children }) => {
         <main className="flex-grow">{children}</main>
 
         <footer className="flex justify-center flex-shrink container mx-auto p-2 mt-4">
-          <div className="inline-flex gap-8">
+          <div className="inline-flex gap-8" style={{ color: 'gray', fontSize: '2rem' }}>
             <a
               href="https://www.youtube.com/channel/UCTh6Ixk5RnRBWaUwsFoVl2w "
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faYoutubeSquare} size="3x" />
+              <FontAwesomeIcon icon={faYoutubeSquare} />
             </a>
             <a href="https://www.instagram.com/matteucci.ar/" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
+              <FontAwesomeIcon icon={faInstagramSquare} />
             </a>
             <a href="https://www.facebook.com/javier.matteucci" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faFacebookSquare} size="3x" />
+              <FontAwesomeIcon icon={faFacebookSquare} />
             </a>
             <a href="mailto:someone@example.com">
-              <FontAwesomeIcon icon={faEnvelope} size="3x" />
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </div>
         </footer>
