@@ -33,7 +33,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  // Redirect
+  createRedirect({
+    fromPath: '/',
+    toPath: '/titles',
+    redirectInBrowser: true,
+    isPermanent: true,
+  });
+
   const result = await graphql(`
     query {
       allTitleJson(sort: { fields: [date], order: DESC }, limit: 100) {
