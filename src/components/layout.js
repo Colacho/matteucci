@@ -43,22 +43,34 @@ const Layout = ({ children }) => {
         <main className="flex-grow">{children}</main>
 
         <footer className="flex justify-center flex-shrink container mx-auto p-2 mt-4">
-          <div className="inline-flex gap-8" style={{ color: 'gray', fontSize: '2rem' }}>
+          <div className="inline-flex gap-8 fill-current text-4xl">
             <a
               href="https://www.youtube.com/channel/UCTh6Ixk5RnRBWaUwsFoVl2w "
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faYoutubeSquare} />
+              <FontAwesomeIcon
+                icon={faYoutubeSquare}
+                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+              />
             </a>
             <a href="https://www.instagram.com/matteucci.ar/" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faInstagramSquare} />
+              <FontAwesomeIcon
+                icon={faInstagramSquare}
+                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+              />
             </a>
             <a href="https://www.facebook.com/javier.matteucci" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faFacebookSquare} />
+              <FontAwesomeIcon
+                icon={faFacebookSquare}
+                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+              />
             </a>
             <a href="mailto:someone@example.com">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+              />
             </a>
           </div>
         </footer>

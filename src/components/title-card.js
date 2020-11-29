@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const TitleCard = ({ slug, image, genre, name, duration, location }) => {
   return (
@@ -14,9 +12,7 @@ const TitleCard = ({ slug, image, genre, name, duration, location }) => {
           to={`../title${slug}`}
           className="absolute w-full h-full top-0 left-0 bg-black bg-opacity-75 flex items-center justify-center transition duration-300 ease-in-out opacity-0 hover:opacity-100"
         >
-          <span className="text-center">
-            <FontAwesomeIcon icon={faPlay} size={'2x'} />
-          </span>
+          <span className="text-center rounded-full border-2 p-2 bg-accent-500">ver</span>
         </Link>
       </div>
       <div className="p-2 flex flex-col text-sm text-gray-500">
