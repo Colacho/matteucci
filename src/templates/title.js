@@ -12,7 +12,7 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
   return (
     <Layout>
       <div className="container mx-auto">
-        <SEO title={`Video - ${titleData.name || ''}`} />
+        <SEO title={titleData.name || ''} />
         <h2 className="mb-4">{titleData.name}</h2>
         <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
       </div>

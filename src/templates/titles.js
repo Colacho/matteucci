@@ -12,7 +12,7 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
   return (
     <Layout>
       {/* TODO add SEO seo={pageContext?.seo} */}
-      <SEO title={'Titles'} />
+      <SEO title={'Títulos'} />
       <div className="bg-primary-600 p-8">
         <h3 className="container mx-auto mb-4 -mt-4">Ultimos titulos</h3>
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
