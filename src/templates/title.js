@@ -18,39 +18,41 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
       <BlackFringe title={titleData.name}>
         <div className="container mx-auto">
           <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
+          {titleData.video && <Video video={titleData.video} />}
         </div>
-        {titleData.video && <Video video={titleData.video} />}
       </BlackFringe>
-      <div className="container mx-auto flex mt-4">
-        <div className="flex-1 flex-row">
-          <h4 className="mb-4">Participantes:</h4>
-          <div className="flex items-center gap-4 mb-4">
-            <Img
-              className="w-12 rounded"
-              fluid={titleData.dataSheet.cast.act1.image.childImageSharp.fluid}
-            />
-            <p className="">{titleData.dataSheet.cast.act1.name}</p>
-          </div>
-          <div className="flex items-center gap-4 mb-4">
-            <Img
-              className="w-12 rounded "
-              fluid={titleData.dataSheet.cast.act2.image.childImageSharp.fluid}
-            />
-            <p>{titleData.dataSheet.cast.act2.name}</p>
-          </div>
-        </div>
-        <div className="flex-1 flex-row">
-          <h4 className="mb-4">Equipo:</h4>
-          <div className="flex items-center gap-4">
-            <div>
+      <div className="mx-8">
+        <div className="container mx-auto flex mt-4">
+          <div className="flex-1 flex-row">
+            <h4 className="mb-4">Participantes:</h4>
+            <div className="flex items-center gap-4 mb-4">
               <Img
                 className="w-12 rounded"
-                fluid={titleData.dataSheet.staff.director.image.childImageSharp.fluid}
+                fluid={titleData.dataSheet.cast.act1.image.childImageSharp.fluid}
               />
+              <p className="">{titleData.dataSheet.cast.act1.name}</p>
             </div>
-            <div className="divide-y divide-accent-500">
-              <p>Direción</p>
-              <p>{titleData.dataSheet.staff.director.name}</p>
+            <div className="flex items-center gap-4 mb-4">
+              <Img
+                className="w-12 rounded "
+                fluid={titleData.dataSheet.cast.act2.image.childImageSharp.fluid}
+              />
+              <p>{titleData.dataSheet.cast.act2.name}</p>
+            </div>
+          </div>
+          <div className="flex-1 flex-row">
+            <h4 className="mb-4">Equipo:</h4>
+            <div className="flex items-center gap-4">
+              <div>
+                <Img
+                  className="w-12 rounded"
+                  fluid={titleData.dataSheet.staff.director.image.childImageSharp.fluid}
+                />
+              </div>
+              <div className="divide-y divide-accent-500">
+                <p>Direción</p>
+                <p>{titleData.dataSheet.staff.director.name}</p>
+              </div>
             </div>
           </div>
         </div>
