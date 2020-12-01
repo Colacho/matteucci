@@ -15,14 +15,13 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
       <SEO title={titleData.name || ''} />
 
       {/* TODO add SEO seo={pageContext?.seo} */}
-      <BlackFringe>
+      <BlackFringe title={titleData.name}>
         <div className="container mx-auto">
-          <h2 className="mb-4">{titleData.name}</h2>
           <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
         </div>
         {titleData.video && <Video video={titleData.video} />}
       </BlackFringe>
-      <div className="container mx-auto flex">
+      <div className="container mx-auto flex mt-4">
         <div className="flex-1 flex-row">
           <h4 className="mb-4">Participantes:</h4>
           <div className="flex items-center gap-4 mb-4">
