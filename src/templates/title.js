@@ -12,13 +12,16 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
 
   return (
     <Layout>
-      <div className="container mx-auto">
-        <SEO title={titleData.name || ''} />
-        <h2 className="mb-4">{titleData.name}</h2>
-        <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
-      </div>
+      <SEO title={titleData.name || ''} />
+
       {/* TODO add SEO seo={pageContext?.seo} */}
-      <BlackFringe>{titleData.video && <Video video={titleData.video} />}</BlackFringe>
+      <BlackFringe>
+        <div className="container mx-auto">
+          <h2 className="mb-4">{titleData.name}</h2>
+          <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
+        </div>
+        {titleData.video && <Video video={titleData.video} />}
+      </BlackFringe>
       <div className="container mx-auto flex">
         <div className="flex-1 flex-row">
           <h4 className="mb-4">Participantes:</h4>
