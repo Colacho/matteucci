@@ -1,3 +1,4 @@
+import BlackFringe from '@/components/black-fringe';
 import Layout from '@/components/layout';
 import React, { useState } from 'react';
 
@@ -18,10 +19,9 @@ function Contact() {
 
   return (
     <Layout>
-      <div className="w-full h-full bg-primary-600">
+      <BlackFringe title={'Queres contactarme?'}>
         <div className="container w-full mx-auto">
-          <h3 className="text-center">Si queres contactarme</h3>
-          <form className="p-4 flex-grow">
+          <form className="flex-grow">
             <div className="flex justify-between mb-4">
               <input
                 className="w-2/5 p-2 bg-primary-300 rounded"
@@ -42,7 +42,7 @@ function Contact() {
             </div>
             <div className="flex">
               <textarea
-                className="flex-grow p-2 bg-primary-300 rounded align-top h-64"
+                className="flex-grow p-2 bg-primary-300 rounded align-top h-64 mb-4"
                 type="textarea"
                 placeholder="Tu mensaje"
                 name="message"
@@ -50,12 +50,12 @@ function Contact() {
                 onChange={handleMessage}
               />
             </div>
+            <div className="text-right">
+              <button className="bg-accent-500 rounded p-2">Enviar</button>
+            </div>
           </form>
-          <div className="text-right p-2 m-2">
-            <button className="bg-accent-500 rounded p-2">Enviar</button>
-          </div>
         </div>
-      </div>
+      </BlackFringe>
     </Layout>
   );
 }

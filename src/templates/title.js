@@ -5,6 +5,7 @@ import SEO from '@/components/seo';
 import Img from 'gatsby-image';
 import Video from '@/components/video';
 import { graphql } from 'gatsby';
+import BlackFringe from '@/components/black-fringe';
 
 const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
   console.log('Page Context', titleData);
@@ -17,10 +18,7 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
         <p className="mb-4" dangerouslySetInnerHTML={{ __html: titleData.description }}></p>
       </div>
       {/* TODO add SEO seo={pageContext?.seo} */}
-
-      <div className="bg-primary-600 p-4 mb-4">
-        {titleData.video && <Video video={titleData.video} />}
-      </div>
+      <BlackFringe>{titleData.video && <Video video={titleData.video} />}</BlackFringe>
       <div className="container mx-auto flex">
         <div className="flex-1 flex-row">
           <h4 className="mb-4">Participantes:</h4>

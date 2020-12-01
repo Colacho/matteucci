@@ -5,6 +5,7 @@ import SEO from '@/components/seo';
 import TitleCard from '@/components/title-card';
 import { graphql, Link } from 'gatsby';
 import cx from 'classnames';
+import BlackFringe from '@/components/black-fringe';
 
 const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: pagination }) => {
   console.log('pagination', pagination);
@@ -13,8 +14,7 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
     <Layout>
       {/* TODO add SEO seo={pageContext?.seo} */}
       <SEO title={'Títulos'} />
-      <div className="bg-primary-600 p-8">
-        <h3 className="container mx-auto mb-4 -mt-4">Ultimos titulos</h3>
+      <BlackFringe title={'Ultimos títulos'}>
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {titlesData.edges.map(({ node: titleData }) => (
             <TitleCard
@@ -76,7 +76,7 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
             </ul>
           </div>
         )}
-      </div>
+      </BlackFringe>
     </Layout>
   );
 };

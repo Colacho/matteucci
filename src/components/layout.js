@@ -51,25 +51,25 @@ const Layout = ({ children }) => {
             >
               <FontAwesomeIcon
                 icon={faYoutubeSquare}
-                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+                className="text-gray-400 hover:text-white transition delay-100 duration-100 ease-in-out"
               />
             </a>
             <a href="https://www.instagram.com/matteucci.ar/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon
                 icon={faInstagramSquare}
-                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+                className="text-gray-400 hover:text-white transition delay-100 duration-100 ease-in-out"
               />
             </a>
             <a href="https://www.facebook.com/javier.matteucci" target="_blank" rel="noreferrer">
               <FontAwesomeIcon
                 icon={faFacebookSquare}
-                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+                className="text-gray-400 hover:text-white transition delay-100 duration-100 ease-in-out"
               />
             </a>
             <a href="mailto:someone@example.com">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="text-gray-500 hover:text-white transition delay-100 duration-100 ease-in-out"
+                className="text-gray-400 hover:text-white transition delay-100 duration-100 ease-in-out"
               />
             </a>
           </div>
