@@ -19,7 +19,7 @@ function Contact() {
 
   return (
     <Layout>
-      <BlackFringe title={'Queres contactarme?'}>
+      <BlackFringe title="Queres contactarme?" description="Contacto - Javier Matteucci">
         <div className="container w-full mx-auto">
           <form className="flex-grow">
             <div className="flex justify-between mb-4">

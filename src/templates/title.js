@@ -12,7 +12,7 @@ const Title = ({ data: { titleJson: titleData = {} } = {} }) => {
 
   return (
     <Layout>
-      <SEO title={titleData.name || ''} />
+      <SEO title={titleData.name || ''} description={titleData.description || ''} />
 
       {/* TODO add SEO seo={pageContext?.seo} */}
       <BlackFringe title={titleData.name}>

@@ -13,7 +13,7 @@ const TestGrid = ({ data: { allTitleJson: titlesData = {} } = {}, pageContext: p
   return (
     <Layout>
       {/* TODO add SEO seo={pageContext?.seo} */}
-      <SEO title={'Títulos'} />
+      <SEO title="Títulos" description="Títulos - Javier Matteucci" />
       <BlackFringe title={'Ultimos títulos'}>
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {titlesData.edges.map(({ node: titleData }) => (
