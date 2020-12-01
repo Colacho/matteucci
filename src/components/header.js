@@ -10,8 +10,8 @@ const Header = ({ siteTitle }) => {
   console.log('location', location);
 
   return (
-    <header className="py-4 mx-8">
-      <div className="container mx-auto flex justify-between content-center">
+    <header className="py-4">
+      <div className="container mx-auto flex justify-between content-center px-4 md:px-8">
         <Logo />
         <div className="self-center">
           <ul className="flex -mx-4">

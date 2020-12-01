@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 const BlackFringe = ({ children, title }) => {
   return (
-    <div className="bg-primary-600 p-8 pt-4 w-full">
-      <h3 className="container mx-auto mb-4">{title}</h3>
-      {children}
+    <div className="bg-primary-600 py-4 w-full">
+      <div className="container mx-auto mb-4 px-4 md:px-8">
+        <h3>{title}</h3>
+        {children}
+      </div>
     </div>
   );
 };
