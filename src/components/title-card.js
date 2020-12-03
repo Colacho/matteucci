@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 
 const TitleCard = ({ slug, image, genre, name, duration, location }) => {
   return (
-    <div className="rounded border-2 border-primary-400 bg-primary-600  relative">
+    <div className="rounded border border-primary relative">
       <div className="relative group">
         {image && <Img className="rounded-t-sm" fluid={image} />}
         <Link

@@ -7,8 +7,7 @@ import SEO from '../components/seo';
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <BlackFringe title={'404: Not Found'}>
-      <h5>Pagina No disponible</h5>
+    <BlackFringe title="Pagina No disponible">
       <p>
         Quiza te interese visitar nuestra pagina de{' '}
         <Link to="/titles/" className="underline text-accent-500">
